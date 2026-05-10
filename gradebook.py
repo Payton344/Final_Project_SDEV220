@@ -131,7 +131,7 @@ class Gradebook:
         return True
 
     # View saved grades
-    def get_student_grade(self, username):
+    def get_student_grades(self, username):
 
         grades = []
 
@@ -149,7 +149,7 @@ class Gradebook:
                     grade = data[2]
 
                     if saved_username == username:
-                        grades.appen((assignment, grade))
+                        grades.append((assignment, grade))
 
             # Close grades.txt file
             file.close()
